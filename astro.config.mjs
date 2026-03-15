@@ -7,9 +7,12 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { SITE } from "./src/config/site.mjs";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.url,
+
   integrations: [
     react(),
     icon(),
@@ -20,6 +23,7 @@ export default defineConfig({
       lastmod: new Date(),
     }),
   ],
+
   vite: {
     plugins: [tailwindcss()],
     build: {
@@ -33,13 +37,18 @@ export default defineConfig({
       },
     },
   },
+
   build: {
     inlineStylesheets: "auto",
     assets: "_assets",
   },
+
   compressHTML: true,
+
   image: {
     domains: [],
     remotePatterns: [],
   },
+
+  adapter: cloudflare(),
 });
