@@ -1,0 +1,26 @@
+---
+import AppCardHeader from "./AppCardHeader.astro";
+---
+
+<section id="features" class="max-w-6xl mx-auto px-4">
+	<div class="grid md:grid-cols-2 gap-8">
+		<div
+			class="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
+		>
+			<AppCardHeader appName="Planner" pageLink="/planner/view" appLink="/planner/app"/>
+			<p class="text-gray-600">
+				Component-based UI library for building interactive interfaces.
+				Seamlessly integrated with Astro for dynamic components.
+			</p>
+		</div>
+		<div
+			class="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
+		>
+			<AppCardHeader appName="Simple Tools" pageLink="/planner/view" appLink="/planner/app"/>
+			<p class="text-gray-600">
+				Production-ready motion library for React. Create smooth animations and
+				delightful user experiences with spring physics.
+			</p>
+		</div>
+	</div>
+</section>
