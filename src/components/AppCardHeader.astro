@@ -15,7 +15,7 @@ const { appName, pageLink, appLink } = Astro.props;
 	<div class="flex gap-3">
 		<a
 			href={pageLink} title="App info"
-			class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-4"
+			class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center mb-4 hover:bg-gray-300"
 		>
 			<Icon
 				name="tabler:eye"
@@ -25,10 +25,10 @@ const { appName, pageLink, appLink } = Astro.props;
 		</a>
 		<a
 			href={appLink} title="Open app"
-			class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-4"
+			class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center mb-4 hover:bg-gray-300"
 		>
 			<Icon
-				name="tabler:login-2"
+				name="tabler:player-play-filled"
 				class="w-6 h-6 text-gray-900"
 				aria-hidden="true"
 			/>
