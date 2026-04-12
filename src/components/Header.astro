@@ -17,7 +17,7 @@ import { Icon } from "astro-icon/components";
     >
       Astro Base
     </a>
-    
+
     <!-- Mobile menu button -->
     <button
       type="button"
@@ -34,7 +34,7 @@ import { Icon } from "astro-icon/components";
     <ul class="hidden md:flex items-center gap-6" role="list">
       <li>
         <a
-          href="/features"
+          href="/src/components/AppList"
           class="text-gray-600 hover:text-gray-900 transition-colors"
           aria-current={Astro.url.pathname === '/features' ? 'page' : undefined}
         >
@@ -72,7 +72,7 @@ import { Icon } from "astro-icon/components";
     <ul class="flex flex-col py-4" role="list">
       <li>
         <a
-          href="/features"
+          href="/src/components/AppList"
           class="block px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors"
           role="menuitem"
           aria-current={Astro.url.pathname === '/features' ? 'page' : undefined}
@@ -108,7 +108,7 @@ import { Icon } from "astro-icon/components";
   // Mobile menu toggle functionality
   const menuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
-  
+
   if (menuButton && mobileMenu) {
     menuButton.addEventListener('click', () => {
       const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';

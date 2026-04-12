@@ -1,0 +1,41 @@
+---
+import AppCardHeader from "./AppCardHeader.astro";
+---
+
+<section id="features" class="max-w-6xl mx-auto px-4 pb-15" >
+	<div class="grid md:grid-cols-2 gap-8">
+
+		<div class="p-5 bg-white rounded-lg border border-gray-200">
+			<AppCardHeader appName="Planner" pageLink="/planner" appLink="https://planner.spruits.eu" />
+			<div class="flex justify-between gap-6 mt-2">
+				<div class="flex-1">
+					<p class="text-gray-600">
+						Planner app Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</p>
+				</div>
+				<img src="/planner_app_preview.png" class="app-img w-60" alt="App preview image" />
+			</div>
+		</div>
+
+		<div class="p-5 bg-white rounded-lg border border-gray-200">
+			<AppCardHeader appName="Simple Tools" appLink="https://simpletools.spruits.eu"/>
+			<div class="flex justify-between gap-6 mt-2">
+				<div class="flex-1">
+					<p class="text-gray-600">
+						Simple tools Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</p>
+				</div>
+				<img src="/simpletools_app_preview.png" class="app-img w-57 border border-gray-100" alt="App preview image" />
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<style lang="scss">
+	.app-img {
+		border-radius: 2px;
+		display: block;
+		margin: 0 auto;
+	}
+</style>

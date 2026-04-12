@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 
 export interface Props {
 	appName: string;
-	pageLink: string;
+	pageLink?: string;
 	appLink: string;
 }
 
@@ -13,25 +13,23 @@ const { appName, pageLink, appLink } = Astro.props;
 <div class="flex flex-row justify-between">
 	<h3 class="text-xl font-semibold text-gray-900 mb-2">{appName}</h3>
 	<div class="flex gap-3">
+		{
+			pageLink && (
+				<a
+					href={pageLink}
+					title="App info"
+					class="w-9 h-9 bg-gray-200 rounded-lg flex items-center justify-center mb-4 hover:bg-gray-300"
+				>
+					<Icon name="tabler:eye" class="w-6 h-6 text-gray-900" aria-hidden="true" />
+				</a>
+			)
+		}
 		<a
-			href={pageLink} title="App info"
-			class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center mb-4 hover:bg-gray-300"
+			href={appLink}
+			title="Open app"
+			class="w-9 h-9 bg-gray-200 rounded-lg flex items-center justify-center mb-4 hover:bg-gray-300"
 		>
-			<Icon
-				name="tabler:eye"
-				class="w-6 h-6 text-gray-900"
-				aria-hidden="true"
-			/>
-		</a>
-		<a
-			href={appLink} title="Open app"
-			class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center mb-4 hover:bg-gray-300"
-		>
-			<Icon
-				name="tabler:player-play-filled"
-				class="w-6 h-6 text-gray-900"
-				aria-hidden="true"
-			/>
+			<Icon name="tabler:player-play-filled" class="w-6 h-6 text-gray-900" aria-hidden="true" />
 		</a>
 	</div>
 </div>
