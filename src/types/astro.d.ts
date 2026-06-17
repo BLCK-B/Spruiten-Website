@@ -25,13 +25,6 @@ export interface LayoutProps extends ComponentProps {
   lang?: string;
 }
 
-// Form data types
-export interface ContactFormData {
-  name: string;
-  email: string;
-  message: string;
-}
-
 export interface APIResponse<T = unknown> {
   success: boolean;
   data?: T;

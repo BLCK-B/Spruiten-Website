@@ -1,28 +1,43 @@
 ---
 import AppCardHeader from "./AppCardHeader.astro";
+
+const cardClass = "p-5 bg-white rounded-lg border border-gray-200 sm:max-w-xl sm:mx-auto lg:max-w-none lg:mx-0";
+const cardBodyClass = "flex flex-col sm:flex-row sm:justify-between gap-6 mt-2";
 ---
 
 <section id="features" class="max-w-6xl mx-auto px-4 pb-15" >
-	<div class="grid md:grid-cols-2 gap-8">
+	<div class="grid lg:grid-cols-2 gap-8">
 
-		<div class="p-5 bg-white rounded-lg border border-gray-200">
+		<div class={cardClass}>
 			<AppCardHeader appName="Planner" pageLink="/planner" appLink="https://planner.spruits.eu" />
-			<div class="flex justify-between gap-6 mt-2">
+			<div class={cardBodyClass}>
 				<div class="flex-1">
 					<p class="text-gray-600">
-						Planner app Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						Planner is the most intuitive everyday to-do list. Keep track of all events and work with minimal overhead.
 					</p>
 				</div>
 				<img src="/planner_app_preview.png" class="app-img w-60" alt="App preview image" />
 			</div>
 		</div>
 
-		<div class="p-5 bg-white rounded-lg border border-gray-200">
-			<AppCardHeader appName="Simple Tools" appLink="https://simpletools.spruits.eu"/>
-			<div class="flex justify-between gap-6 mt-2">
+		<div class={cardClass}>
+			<AppCardHeader appName="Mattermaps" appLink="https://maps.spruits.eu"/>
+			<div class={cardBodyClass}>
 				<div class="flex-1">
 					<p class="text-gray-600">
-						Simple tools Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						3D maps with accurate elevation data and powerful route planning (OSM, GraphHopper, Mapterhorn).
+					</p>
+				</div>
+				<img src="/maps_app_preview.png" class="app-img w-57 border border-gray-100" alt="App preview image" />
+			</div>
+		</div>
+
+		<div class={cardClass}>
+			<AppCardHeader appName="Simple Tools" appLink="https://simpletools.spruits.eu"/>
+			<div class={cardBodyClass}>
+				<div class="flex-1">
+					<p class="text-gray-600">
+						Browser utilities like diff check, JSON formatter, find and replace. All data stays local.
 					</p>
 				</div>
 				<img src="/simpletools_app_preview.png" class="app-img w-57 border border-gray-100" alt="App preview image" />
